@@ -1,3 +1,5 @@
+// 6410406631 Thanyamas Chancharoen
+
 package ku.atm;
 
 import io.cucumber.java.Before;
@@ -70,4 +72,8 @@ public class StepDefATM {
                      bank.getCustomer(id).getAccount().getBalance());
     }
 
+    @When("I deposit amount {float} into the account with ATM")
+    public void Deposit(double amount) {
+        atm.deposit(amount);
+    }
 }
